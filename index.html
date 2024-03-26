@@ -15,6 +15,26 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 </head>
+<style>
+	#archivos {
+		border: 1px solid rgb(255, 255, 255);
+		border-radius: 10px;
+		padding: -1px;
+		background-color: rgb(0, 0, 0);
+		width: 70%;
+	}
+
+	#caja {
+		padding: 0%;
+		border-radius: 10px;
+		width: 100%;
+		text-align: center;
+		font-family: monospace;
+		align-items: center;
+		border-radius: 4px;
+		border: 1px solid white;
+	}
+</style>
 
 <body class="is-preload">
 
@@ -52,12 +72,13 @@
 			<article id="intro">
 				<h2 class="major">Intro</h2>
 				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-				<p  style="font-family: monospace;">Bienvenido a Software Space: Explorando el Universo Digital
+				<p style="font-family: monospace;">Bienvenido a Software Space: Explorando el Universo Digital
 					En un mundo donde la tecnología evoluciona a la velocidad de la luz, navegar por el espacio digital
 					puede parecer abrumador. En Software Space, nos destacamos como guías expertos en este vasto
 					universo, ayudando a empresas a encontrar su rumbo entre las constelaciones de software y
 					tecnología.<a href="#work">awesome work</a>.</p>
-				<p style="font-family: monospace;">Con una combinación única de conocimiento técnico y visión estratégica, en Software Space ofrecemos
+				<p style="font-family: monospace;">Con una combinación única de conocimiento técnico y visión
+					estratégica, en Software Space ofrecemos
 					soluciones personalizadas para impulsar el crecimiento y la eficiencia de tu negocio. Desde la
 					consultoría en desarrollo de software hasta la optimización de procesos, nuestro equipo de expertos
 					está aquí para llevar tu empresa más allá de los confines de lo convencional. Únete a nosotros
@@ -70,11 +91,13 @@
 			<article id="work">
 				<h2 class="major">Work</h2>
 				<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-				<p style="font-family: monospace;">En Software Space, nos apasiona explorar las fronteras de la tecnología, y React Spring es solo el
+				<p style="font-family: monospace;">En Software Space, nos apasiona explorar las fronteras de la
+					tecnología, y React Spring es solo el
 					comienzo de nuestro viaje. Además de esta potente biblioteca, aprovechamos una variedad de
 					frameworks y tecnologías de vanguardia para ofrecerte soluciones innovadoras y eficientes. Aquí hay
 					un vistazo a algunas de las herramientas que utilizamos para construir el futuro digital:</p>
-				<p style="font-family: monospace;">Next.js: Potenciamos nuestras aplicaciones web con Next.js para una experiencia de usuario rápida y
+				<p style="font-family: monospace;">Next.js: Potenciamos nuestras aplicaciones web con Next.js para una
+					experiencia de usuario rápida y
 					dinámica, aprovechando su capacidad de renderizado del lado del servidor y su enfoque en la
 					optimización del rendimiento.
 
@@ -102,7 +125,8 @@
 			<article id="about">
 				<h2 class="major">About</h2>
 				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-				<p style="font-family: monospace;">En Software Space, nos apasiona impulsar la transformación digital y llevar a las empresas más allá
+				<p style="font-family: monospace;">En Software Space, nos apasiona impulsar la transformación digital y
+					llevar a las empresas más allá
 					de los límites convencionales. Con una mezcla única de experiencia técnica y visión estratégica, nos
 					dedicamos a proporcionar soluciones innovadoras y personalizadas que impulsan el éxito a largo plazo
 					de nuestros clientes.
@@ -129,7 +153,7 @@
 			<!-- Contact -->
 			<article id="contact">
 				<h2 class="major">Contact</h2>
-				<form method="post" action="#" id="formulario-gmail">
+				<form method="post" action="#" id="formulario-gmail" enctype="multipart/form-data">
 					<div class="fields">
 						<div class="field half">
 							<label for="name">Name</label>
@@ -137,11 +161,16 @@
 						</div>
 						<div class="field half">
 							<label for="email">Email</label>
-							<input type="text" name="email" id="email" required/>
+							<input type="text" name="email" id="email" required />
 						</div>
 						<div class="field">
 							<label for="message">Message</label>
 							<textarea name="message" id="message" rows="4" required></textarea>
+						</div>
+						<div class="field">
+							<label for="archivos">archivos</label>
+							<div id="caja"> Seleccione el Archivo A enviar<input rows="4" type="file" name="archivos"
+									id="archivos" rows="4" ></input></div>
 						</div>
 					</div>
 					<ul class="actions">

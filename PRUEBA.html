@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+</head>
+<body>
+    <h2>Upload File</h2>
+    <input type="text" id="text">
+    <input type="file" id="fileInput" />
+    <button onclick="uploadFile()">Upload</button>
+
+    <script>
+        function uploadFile() {
+            // Selecciona el archivo del input
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            const text = document.getElementById('text');
+            // Crea un objeto FormData y agrega el archivo a él
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('text', text);
+            // Realiza una solicitud POST a tu endpoint de carga de archivos en el backend
+            fetch('http://localhost:8080/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    // La carga fue exitosa
+                    console.log('File uploaded successfully');
+                } else {
+                    // La carga falló
+                    console.error('File upload failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
